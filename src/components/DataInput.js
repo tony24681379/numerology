@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TextField from 'material-ui/TextField';
 import DatePicker from 'material-ui/DatePicker';
 import './DataInput.css'
 
-class DataInput extends Component {
+class DataInput extends React.Component {
   constructor(props) {
     super(props);
     this.state = {

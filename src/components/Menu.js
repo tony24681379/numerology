@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import MenuItem from 'material-ui/MenuItem';
 import { Link } from 'react-router-dom';
 
-export default class Menu extends Component {
+export default class Menu extends React.Component {
   constructor(props) {
     super(props);
     this.state = {open: false};
