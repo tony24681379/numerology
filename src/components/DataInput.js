@@ -12,18 +12,22 @@ class DataInput extends React.Component {
       ,birthday: props.birthday
     };
   }
+
   handleChineseName = (e) => {
     this.setState({chineseName: e.target.value});
     console.log(this.state.chineseName);
   }
+
   handleEnglishName = (e) => {
     this.setState({englishName: e.target.value});
     console.log(this);
   }
+
   handleBirthday = (e , date) => {
     this.setState({birthday: date});
     console.log(this.state.birthday);
   }
+
   render() {
     return (
       <div className="DataInput">

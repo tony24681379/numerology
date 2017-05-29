@@ -1,10 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import Menu from './components/Menu';
-import Home from './components/Home';
-import Load from './components/Load';
-import DataInput from './components/DataInput';
+import DataTab from './components/DataTab';
 
 // import react router deps
 import { BrowserRouter as Router,Route } from 'react-router-dom'
@@ -16,10 +14,8 @@ const router = (
   <Router>
     <MuiThemeProvider>
       <div>
-        <Menu/>
-        <Route exact path="/" component={DataInput}/>
-        <Route path="/Home" component={Home}/>
-        <Route path="/Load" component={Load}/>
+        {/*<DataTab/>*/}
+        <Route exact path="/" component={DataTab}/>
       </div>
     </MuiThemeProvider>
   </Router>

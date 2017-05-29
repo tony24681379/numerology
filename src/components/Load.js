@@ -1,20 +1,15 @@
 import React from 'react';
-import birthday from '../data/birthday';
-import {Table, TableBody, TableFooter, TableHeader, TableHeaderColumn, TableRow, TableRowColumn}
+import {Table, TableBody, TableHeader, TableHeaderColumn, TableRow, TableRowColumn}
   from 'material-ui/Table';
 
 export default class Load extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data:[]
+      data: this.props.data
     };
   }
-  componentDidMount() {
-    this.setState({
-      data: birthday
-    });
-  }
+
   render() {
     return (
       <div>
@@ -38,7 +33,7 @@ export default class Load extends React.Component {
           displayRowCheckbox={true}
           showRowHover={true}
         >
-          {this.state.data.map( (birth, index) => (
+          {this.props.data.map( (birth, index) => (
             <TableRow key={index} selected={birth.selected}>
               <TableRowColumn>{index}</TableRowColumn>
               <TableRowColumn>{birth.chinese_name}</TableRowColumn>
