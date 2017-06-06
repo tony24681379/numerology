@@ -14,7 +14,6 @@ const router = (
   <Router>
     <MuiThemeProvider>
       <div>
-        {/*<DataTab/>*/}
         <Route exact path="/" component={DataTab}/>
       </div>
     </MuiThemeProvider>

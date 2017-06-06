@@ -10,11 +10,11 @@ export default class DataTab extends React.Component {
     super(props);
     this.state = {
       data:[],
-      tab: 'load'
+      tab: 'input'
     };
   }
   
-  componentDidMount() {
+  componentWillMount() {
     this.setState({
       data: birthday
     });
@@ -34,7 +34,12 @@ export default class DataTab extends React.Component {
       >
         <Tab icon={<FontAwesome name='calendar'/>} label="計算結果" value="input">
           <div>
-            <DataInput/>
+            <DataInput
+              id={this.state.data[0].id}
+              chineseName={this.state.data[0].chineseName}
+              englishName={this.state.data[0].englishName}
+              birthday={this.state.data[0].birthday}
+            />
           </div>
         </Tab>
         <Tab icon={<FontAwesome name='folder-open-o'/>} label="讀取資料" value="load">
