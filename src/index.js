@@ -7,8 +7,8 @@ import DataTab from './components/DataTab';
 // import react router deps
 import { BrowserRouter as Router,Route } from 'react-router-dom'
 
-var injectTapEventPlugin = require("react-tap-event-plugin");
-injectTapEventPlugin();
+var injectTapEventPlugin = require("react-tap-event-plugin")
+injectTapEventPlugin()
 
 const router = (
   <Router>
@@ -23,4 +23,4 @@ const router = (
 ReactDOM.render(
   router,
   document.getElementById('root')
-);
+)

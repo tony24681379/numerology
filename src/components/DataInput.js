@@ -12,14 +12,14 @@ class DataInput extends React.Component {
       chineseName: props.chineseName,
       englishName: props.englishName,
       birthday: new Date(props.birthday)
-    };
+    }
   }
 
   static defaultProps = {
     chineseName: '',
     englishName: '',
     birthday: new Date(),
-  };
+  }
 
   handleChineseName = (e) => {
     this.setState({chineseName: e.target.value});
@@ -56,8 +56,8 @@ class DataInput extends React.Component {
         />
         <SummitChallenge birthday={this.state.birthday}/>
       </div>
-    );
+    )
   }
 }
 
-export default DataInput;
+export default DataInput

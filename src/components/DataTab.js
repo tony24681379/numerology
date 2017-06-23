@@ -7,24 +7,24 @@ import DataInput from './DataInput';
 
 export default class DataTab extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       data:[],
       tab: 'input'
-    };
+    }
   }
   
   componentWillMount() {
     this.setState({
       data: birthday
-    });
+    })
   }
 
   handleTabChange = (value) => {
     this.setState({
-      tab: value,
-    });
-  };
+      tab: value
+    })
+  }
 
   render() {
     return (
@@ -48,6 +48,6 @@ export default class DataTab extends React.Component {
           </div>
         </Tab>
       </Tabs>
-    );
+    )
   }
 }

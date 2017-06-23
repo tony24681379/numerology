@@ -1,13 +1,14 @@
 import expect, { createSpy, spyOn, isSpy } from 'expect'
-import {birthdayToNumber} from '../components/Caculate'
+import numerology from '../calculate/calculate'
 import assert from 'assert'
 
-describe('Calculate', ()=> {
+describe('calculate', ()=> {
+  let number = new numerology(new Date('1988/05/25'))
   describe('birthdayToNumber', ()=> {
-    it('should 26 when the value 1988', ()=> {
+    it('should equal 26 when the value is 1988', ()=> {
       expect(
-        birthdayToNumber(1988)
+        number.birthdayToNumber(1988)
       ).toEqual(26)
-    });
-  });
-});
+    })
+  })
+})
