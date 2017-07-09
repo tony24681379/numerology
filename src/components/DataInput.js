@@ -1,7 +1,7 @@
 import React from 'react';
 import TextField from 'material-ui/TextField';
 import DatePicker from 'material-ui/DatePicker';
-import SummitChallenge from './Caculate';
+import Result from './Caculate';
 import './DataInput.css'
 
 class DataInput extends React.Component {
@@ -54,7 +54,7 @@ class DataInput extends React.Component {
           hintText="出生日期"
           value={new Date(this.state.birthday)}
         />
-        <SummitChallenge birthday={this.state.birthday}/>
+        <Result birthday={this.state.birthday} name={this.state.englishName}/>
       </div>
     )
   }
